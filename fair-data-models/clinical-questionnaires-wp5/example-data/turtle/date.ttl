@@ -1,0 +1,17 @@
+@prefix : <http://w3id.org/bind/data/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:testing_process_ a obo:NCIT_C91105, sio:SIO_000006 ;
+    rdfs:label "Process: Performing a behavioral test"^^xsd:string ;
+    sio:SIO_000230 :test_input_ ;
+    sio:SIO_000008 :date_attribute_ .
+
+:test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
+    rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .  
+
+:date_attribute_ a obo:NCIT_C25164, sio:SIO_000614 ;
+    rdfs:label "Attribute Type: Date" ;
+    sio:SIO_000300 "2022-02-21"^^xsd:date .

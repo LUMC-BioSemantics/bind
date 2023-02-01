@@ -1,0 +1,115 @@
+PREFIX : <http://w3id.org/bind/data/v1/shex/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+:identifierShape IRI {
+    a [obo:IAO_0020000] ;
+    a [sio:SIO_000115] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string ;
+    sio:SIO_000020 @:treatedRoleShape
+}
+
+:entityShape IRI {
+    a [obo:NCBITaxon_10090] ;
+    a [sio:SIO_010375] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000008 @:genotypeShape ;
+    sio:SIO_000008 @:treatedAgeShape ;
+    sio:SIO_000228 @:treatedRoleShape ;
+    sio:SIO_000008 @:treatedAttributeShape
+}
+
+:genotypeShape IRI {
+    a [obo:SO_0001027] ;
+    a [sio:SIO_000614] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:string
+}
+
+:treatedAgeShape IRI {
+    a [obo:NCIT_C124440] ;
+    a [sio:SIO_000614] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:integer ;
+    sio:SIO_000221 @:treatedAgeUnitShape
+}
+
+:treatedAgeUnitShape IRI {
+    a [obo:UO_0000034] ;
+    a [sio:SIO_000074] ;
+    rdfs:label xsd:string?
+}
+
+:treatedRoleShape IRI {
+    a [obo:OBI_0000813] ;
+    a [sio:SIO_000016] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000356 @:restorationMeasurementProcessShape
+}
+
+:restorationMeasurementProcessShape IRI {
+    a [obo:ERO_0000833] ;
+    a [obo:OBI_0000070] ;
+    a [sio:SIO_000006] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000291 @:treatedTargetShape ;
+    sio:SIO_000229 @:restorationOutputShape ;
+    sio:SIO_000008 @:measurementTimeShape
+}
+
+:treatedTargetShape IRI {
+    a [obo:UBERON_0002037] ;
+    a [obo:UBERON_0002616] ;
+    a [sio:SIO_010046] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000068 @:entityShape
+}
+
+:restorationOutputShape IRI {
+    a [obo:IAO_0000109] ;
+    a [sio:SIO_000015] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_000300 xsd:float ;
+    sio:SIO_000221 @:outputUnitShape ;
+    sio:SIO_000628 @:treatedAttributeShape
+}
+
+:measurementTimeShape IRI {
+    a [obo:EUPATH_0023051] ;
+    a [obo:IAO_0000582] ;
+    a [sio:SIO_000417] ;
+    rdfs:label xsd:string? ;
+    rdfs:comment xsd:string ;
+    sio:SIO_000300 xsd:integer ;
+    sio:SIO_000221 @:timeUnitShape ;
+    sio:SIO_000001 @:treatedRoleShape
+}
+
+:outputUnitShape IRI {
+    a [obo:UO_0000187] ;
+    a [sio:SIO_000074] ;
+    rdfs:label xsd:string?
+}
+
+:treatedAttributeShape IRI {
+    a [obo:PR_P11531-1] ;
+    a [sio:SIO_000614] ;
+    rdfs:label xsd:string? ;
+    sio:SIO_010079 @:geneShape
+}
+
+:timeUnitShape IRI {
+    a [obo:UO_0000034] ;
+    a [sio:SIO_000074] ;
+    rdfs:label xsd:string?
+}
+
+:geneShape IRI {
+    a [<http://www.orpha.net/ORDO/Orphanet_121117>] ;
+    a [obo:SO_0000704] ;
+    a [sio:SIO_010035] ;
+    rdfs:label xsd:string?
+}

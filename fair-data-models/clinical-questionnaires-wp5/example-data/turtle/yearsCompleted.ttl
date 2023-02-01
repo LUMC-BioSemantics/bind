@@ -1,0 +1,65 @@
+@prefix : <http://w3id.org/bind/data/v1/example-rdf/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:patient_identifier_ a sio:SIO_000115 ;
+    rdfs:label "Identifier: Patient"^^xsd:string ;
+    sio:SIO_000020 :patient_role_ ;
+    sio:SIO_000300 "uid_000001"^^xsd:string .
+
+:primary_school_identifier_ a sio:SIO_000115 ;
+    rdfs:label "Identifier: Primary school"^^xsd:string ;
+    sio:SIO_000020 :primary_school_role_ ;
+    sio:SIO_000300 "uid_000002"^^xsd:string .
+
+:secondary_school_identifier_ a sio:SIO_000115 ;
+    rdfs:label "Identifier: Secondary school"^^xsd:string ;
+    sio:SIO_000020 :secondary_school_role_ ;
+    sio:SIO_000300 "uid_000003"^^xsd:string .
+
+:person_ a sio:SIO_000498 ;
+    rdfs:label "Person"^^xsd:string ;
+    sio:SIO_000228 :patient_role_, :primary_school_role_, :secondary_school_role_ ;
+    sio:SIO_000008 :education_attribute_ .
+
+:patient_role_ a obo:OBI_0000093, sio:SIO_000016 ;
+    rdfs:label "Role: Patient"^^xsd:string ;
+    sio:SIO_000356 :primary_school_process_, :secondary_school_process_ .
+
+:primary_school_role_ a obo:OMRSE_00000060, sio:SIO_000016 ;
+    rdfs:label "Role: Primary school"^^xsd:string ;
+    sio:SIO_000356 :primary_school_process_ .
+
+:secondary_school_role_ a obo:OMRSE_00000065, sio:SIO_000016 ;
+    rdfs:label "Role: Secondary school"^^xsd:string ;
+    sio:SIO_000356 :secondary_school_process_ .
+
+:primary_school_process_ a sio:SIO_001054, sio:SIO_000006 ;
+    rdfs:label "Process: Years completed in 1ary school assessment"^^xsd:string ;
+    sio:SIO_000230 :test_input_ ;
+    sio:SIO_000229 :primary_school_output_ .
+
+:secondary_school_process_ a sio:SIO_001054, sio:SIO_000006 ;
+    rdfs:label "Process: Years completed in 2ary school assessment"^^xsd:string ;
+    sio:SIO_000230 :test_input_ ;
+    sio:SIO_000229 :secondary_school_output_ .
+
+:primary_school_output_ a sio:SIO_000070, sio:SIO_000015 ;
+    rdfs:label "Output Type: Years completed in primary school"^^xsd:string ;
+    sio:SIO_000300 "6"^^xsd:string ;
+    sio:SIO_000221 obo:UO_0000036 ;
+    sio:SIO_000628 :education_attribute_ .
+
+:secondary_school_output_ a sio:SIO_000070, sio:SIO_000015 ;
+    rdfs:label "Output Type: Years completed in secondary school"^^xsd:string ;
+    sio:SIO_000300 "n/a"^^xsd:string ;
+    sio:SIO_000221 obo:UO_0000036 ;
+    sio:SIO_000628 :education_attribute_ .
+
+:education_attribute_ a obo:NCIT_C17953, sio:SIO_000614 ;
+    rdfs:label "Attribute Type: Education level"^^xsd:string .
+
+:test_input_ a obo:NCIT_C17048, sio:SIO_000148 ;
+    rdfs:label "Input Type: KHTQ Questionnaire Document"^^xsd:string .
