@@ -2,8 +2,8 @@
 This module describes the data elements in the single-cell RNA sequencing . It specifically covers the data element in the table _DCDE Laboratory measurement_. This module is based on the EJP RD CDE semantic model module for _Disease diagnosis_ group [CDE-semantic-model/disease diagnosis](https://github.com/ejp-rd-vp/CDE-semantic-model/blob/master/docs/disease_diagnosis.md).
 
 <p align="center">
-    <a href="/rna-seq-wp2/images/rdf/single-cell.png" target="_blank">
-        <img src="/rna-seq-wp2/images/rdf/single-cell.png">
+    <a href="../images/rdf/single-cell.png" target="_blank">
+        <img src="../images/rdf/single-cell.png">
     </a>
 </p>
 
