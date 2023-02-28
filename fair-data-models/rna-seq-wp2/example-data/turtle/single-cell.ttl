@@ -21,7 +21,7 @@
     rdfs:label "Role: Specimen"^^xsd:string ;
     sio:SIO_000356 :rna_process_ .
     
-:rna_process_ a obo:OBI_0001177, sio:SIO_000006 ;
+:rna_process_ a obo:OBI_0002631, sio:SIO_000006 ;
     rdfs:label "Process: RNA-seq"^^xsd:string ;
     sio:SIO_000291 :anatomy_ ;
     sio:SIO_000229 :raw_ ;
@@ -39,7 +39,7 @@
 
 :cell_id_ a sio:SIO_000115;
     rdfs:label "Cell-ID"^^xsd:string;
-    sio:SIO_000020 :cell_ ;
+    sio:SIO_000628 :cell_ ;
     sio:SIO_000300 "cid_000001"^^xsd:string .
     
 :raw_ a sio:SIO_000015, obo:NCIT_C184799;
