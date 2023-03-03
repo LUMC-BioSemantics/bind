@@ -161,7 +161,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     rdfs:label xsd:string?;
     sio:SIO_000628 @:expressionShex;
     sio:SIO_000221 @:integerShex ;
-    sio:SIO_000300 xsd:string 
+    sio:SIO_000300 xsd:integer 
 }
 
 :normalizedShex IRI {
@@ -170,7 +170,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     rdfs:label xsd:string?;
     sio:SIO_000628 @:expressionShex;
     sio:SIO_000221 @:floatShex ;
-    sio:SIO_000300 xsd:string 
+    sio:SIO_000300 xsd:float 
 }
     
 :floatShex IRI {
