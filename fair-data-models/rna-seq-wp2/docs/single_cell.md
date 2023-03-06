@@ -127,9 +127,9 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     a [obo:OBI_0002631];
     a [sio:SIO_000006] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000291 @:anatomyShex ;
-    sio:SIO_000229 @:rawShex ;
-    sio:SIO_000229 @:normalizedShex ;
+    sio:SIO_000291 @:anatomyShex;
+    sio:SIO_000229 @:rawShex +;
+    sio:SIO_000229 @:normalizedShex +;
     sio:SIO_000230 @:cellShex
 }
 
