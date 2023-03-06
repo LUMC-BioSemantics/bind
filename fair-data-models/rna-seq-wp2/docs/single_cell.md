@@ -124,7 +124,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 }
     
 :rna_processShex IRI {
-    a [obo:OBI_0001177];
+    a [obo:OBI_0002631];
     a [sio:SIO_000006] ;
     rdfs:label xsd:string? ;
     sio:SIO_000291 @:anatomyShex ;
