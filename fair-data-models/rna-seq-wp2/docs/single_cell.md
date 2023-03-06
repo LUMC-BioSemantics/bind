@@ -142,7 +142,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 :anatomyShex IRI {
     a [obo:UBERON_0001950] OR [obo:UBERON_0002421];
     a [obo:UBERON_0002616];
-    a [sio:SIO_010046];
+    a [sio:SIO_001262];
     rdfs:label xsd:string?;
     sio:SIO_000008 @:expressionShex ;
     sio:SIO_000068 @:mouseShex
