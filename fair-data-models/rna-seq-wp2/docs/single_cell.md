@@ -100,7 +100,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX prov: <http://www.w3.org/ns/prov#> 
 
-
 :identifierShex IRI {
     a [sio:SIO_000115] ;
     rdfs:label xsd:string? ;
@@ -113,7 +112,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     rdfs:label xsd:string? ;
     sio:SIO_000228 @:roleShex;
     sio:SIO_000008 @:genotypeShex ;
-    sio:SIO_000008 @:expressionShex
+    sio:SIO_000008 @:expressionShex +
 }
 
 :roleShex IRI {
@@ -144,7 +143,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     a [obo:UBERON_0002616];
     a [sio:SIO_001262];
     rdfs:label xsd:string?;
-    sio:SIO_000008 @:expressionShex ;
+    sio:SIO_000008 @:expressionShex +;
     sio:SIO_000068 @:mouseShex
 }
 
@@ -160,7 +159,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     a [obo:NCIT_C184799];
     rdfs:label xsd:string?;
     sio:SIO_000628 @:expressionShex;
-    sio:SIO_000221 @:integerShex ;
+    sio:SIO_000221 @:integerShex;
     sio:SIO_000300 xsd:integer 
 }
 
