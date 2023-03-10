@@ -2,7 +2,7 @@
 This module describes the phenotypic data elements. It specifically covers the data element in the table _Behavioral Studies_. This module is based on the EJP RD CDE semantic model module for _Disease diagnosis_ group [CDE-semantic-model/Phenotype](https://github.com/ejp-rd-vp/CDE-semantic-model/blob/develop/docs/6.Phenotype.md).
 
 <p align="center">
-    <a href="../images/rdf/phenptype.png" target="_blank">
+    <a href="../images/rdf/phenotype.png" target="_blank">
         <img src="../images/rdf/phenotype.png">
     </a>
 </p>

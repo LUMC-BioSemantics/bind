@@ -32,7 +32,7 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     rdfs:label "Role: Specimen"^^xsd:string ;
     sio:SIO_000356 :rna_process_ .
     
-:rna_process_ a obo:OBI_0001177, sio:SIO_000006 ;
+:rna_process_ a obo:OBI_0002631, sio:SIO_000006 ;
     rdfs:label "Process: RNA-seq"^^xsd:string ;
     sio:SIO_000291 :anatomy_ ;
     sio:SIO_000229 :raw_ ;
@@ -50,7 +50,7 @@ This module describes the data elements in the single-cell RNA sequencing . It s
 
 :cell_id_ a sio:SIO_000115;
     rdfs:label "Cell-ID"^^xsd:string;
-    sio:SIO_000020 :cell_ ;
+    sio:SIO_000628 :cell_ ;
     sio:SIO_000300 "cid_000001"^^xsd:string .
     
 :raw_ a sio:SIO_000015, obo:NCIT_C184799;
@@ -100,7 +100,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX prov: <http://www.w3.org/ns/prov#> 
 
-
 :identifierShex IRI {
     a [sio:SIO_000115] ;
     rdfs:label xsd:string? ;
@@ -113,7 +112,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     rdfs:label xsd:string? ;
     sio:SIO_000228 @:roleShex;
     sio:SIO_000008 @:genotypeShex ;
-    sio:SIO_000008 @:expressionShex
+    sio:SIO_000008 @:expressionShex +
 }
 
 :roleShex IRI {
@@ -124,12 +123,12 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 }
     
 :rna_processShex IRI {
-    a [obo:OBI_0001177];
+    a [obo:OBI_0002631];
     a [sio:SIO_000006] ;
     rdfs:label xsd:string? ;
-    sio:SIO_000291 @:anatomyShex ;
-    sio:SIO_000229 @:rawShex ;
-    sio:SIO_000229 @:normalizedShex ;
+    sio:SIO_000291 @:anatomyShex;
+    sio:SIO_000229 @:rawShex +;
+    sio:SIO_000229 @:normalizedShex +;
     sio:SIO_000230 @:cellShex
 }
 
@@ -140,11 +139,11 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 }
     
 :anatomyShex IRI {
-    a [obo:UBERON_0002037];
+    a [obo:UBERON_0001950] OR [obo:UBERON_0002421];
     a [obo:UBERON_0002616];
-    a [sio:SIO_010046];
+    a [sio:SIO_001262];
     rdfs:label xsd:string?;
-    sio:SIO_000008 @:expressionShex ;
+    sio:SIO_000008 @:expressionShex +;
     sio:SIO_000068 @:mouseShex
 }
 
@@ -160,8 +159,8 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     a [obo:NCIT_C184799];
     rdfs:label xsd:string?;
     sio:SIO_000628 @:expressionShex;
-    sio:SIO_000221 @:integerShex ;
-    sio:SIO_000300 xsd:string 
+    sio:SIO_000221 @:integerShex;
+    sio:SIO_000300 xsd:integer 
 }
 
 :normalizedShex IRI {
@@ -170,7 +169,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
     rdfs:label xsd:string?;
     sio:SIO_000628 @:expressionShex;
     sio:SIO_000221 @:floatShex ;
-    sio:SIO_000300 xsd:string 
+    sio:SIO_000300 xsd:float 
 }
     
 :floatShex IRI {
