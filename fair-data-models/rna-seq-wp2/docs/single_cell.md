@@ -26,7 +26,7 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     rdfs:label "Entity: Mouse"^^xsd:string ;
     sio:SIO_000228 :role_ ;
     sio:SIO_000008 :genotype_ ;
-    sio:SIO_000008 :expression_.
+    sio:SIO_000008 :attribute_.
     
 :role_ a obo:OBI_0000112, sio:SIO_000016 ;
     rdfs:label "Role: Specimen"^^xsd:string ;
@@ -34,7 +34,7 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     
 :rna_process_ a obo:OBI_0002631, sio:SIO_000006 ;
     rdfs:label "Process: RNA-seq"^^xsd:string ;
-    sio:SIO_000291 :anatomy_ ;
+    sio:SIO_000291 :expression_ ;
     sio:SIO_000229 :raw_ ;
     sio:SIO_000229 :normalized_ ;
     sio:SIO_000230 :cell_.
@@ -43,9 +43,8 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     rdfs:label "Input: Cell"^^xsd:string ;
     obo:HSO_0000243 :anatomy_.
     
-:anatomy_ a obo:UBERON_0002037, obo:UBERON_0002616, sio:SIO_010046;
+:anatomy_ a obo:UBERON_0002421, obo:UBERON_0002616, sio:SIO_001262;
     rdfs:label "Target: Anatomy"^^xsd:string ;
-    sio:SIO_000008 :expression_ ;
     sio:SIO_000068 :mouse_ .
 
 :cell_id_ a sio:SIO_000115;
@@ -55,15 +54,18 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     
 :raw_ a sio:SIO_000015, obo:NCIT_C184799;
     rdfs:label "Output: Raw-Counts"^^xsd:string;
-    sio:SIO_000628 :expression_;
+    sio:SIO_000628 :attribute_;
     sio:SIO_000221 :integer_ ;
     sio:SIO_000300 "1262"^^xsd:string .
 
 :normalized_ a sio:SIO_000015, obo:NCIT_C184799;
     rdfs:label "Output: Normalized-Counts"^^xsd:string;
-    sio:SIO_000628 :expression_;
+    sio:SIO_000628 :attribute_;
     sio:SIO_000221 :float_ ;
     sio:SIO_000300 "0.16"^^xsd:string .
+
+:attribute_ a sio:SIO_000614, obo:OMIT_0016499;
+    rdfs:label "Attribute: Gene Expression"^^xsd:string.
     
 :float_ a sio:SIO_000074, obo:UO_0000192, obo:NCIT_C181341;
     rdfs:label "Unit: Normalized Molecule Count"^^xsd:string.
@@ -71,8 +73,8 @@ This module describes the data elements in the single-cell RNA sequencing . It s
 :integer_ a sio:SIO_000074, obo:UO_0000192;
     rdfs:label "Unit: Molecule Count"^^xsd:string.
     
-:expression_ a sio:SIO_010450, sio:SIO_000614;
-    rdfs:label "Attribute: RNA expression"^^xsd:string ;
+:expression_ a sio:SIO_010450, sio:SIO_010450;
+    rdfs:label "RNA transcript"^^xsd:string ;
     sio:SIO_010079 :gene_ .
 
 :gene_ a sio:SIO_010101;
