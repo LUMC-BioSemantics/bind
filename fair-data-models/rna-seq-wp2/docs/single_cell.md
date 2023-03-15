@@ -22,7 +22,7 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     sio:SIO_000020 :role_ ;
     sio:SIO_000300 "mouse_36242"^^xsd:string .
 
-:mouse_ a sio:SIO_000486, a obo_NCIT:C45247;
+:mouse_ a sio:SIO_000486, obo:NCIT_C45247;
     rdfs:label "Entity: Mouse"^^xsd:string ;
     sio:SIO_000228 :role_ ;
     sio:SIO_000008 :genotype_ .
