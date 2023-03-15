@@ -22,7 +22,7 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     sio:SIO_000020 :role_ ;
     sio:SIO_000300 "mouse_36242"^^xsd:string .
 
-:mouse_ a sio:SIO_000486 ;
+:mouse_ a sio:SIO_000486, a obo_NCIT:C45247;
     rdfs:label "Entity: Mouse"^^xsd:string ;
     sio:SIO_000228 :role_ ;
     sio:SIO_000008 :genotype_ .
@@ -53,18 +53,18 @@ This module describes the data elements in the single-cell RNA sequencing . It s
     
 :raw_ a sio:SIO_000015, obo:NCIT_C184799;
     rdfs:label "Output: Raw-Counts"^^xsd:string;
-    sio:SIO_000221 :integer_ ;
+    sio:SIO_000221 :raw_unit_ ;
     sio:SIO_000300 "1262"^^xsd:string .
 
 :normalized_ a sio:SIO_000015, obo:NCIT_C184799;
     rdfs:label "Output: Normalized-Counts"^^xsd:string;
-    sio:SIO_000221 :float_ ;
+    sio:SIO_000221 :normalized_unit_ ;
     sio:SIO_000300 "0.16"^^xsd:string .
     
-:float_ a sio:SIO_000074, obo:UO_0000192, obo:NCIT_C181341;
+:normalized_unit_ a sio:SIO_000074, obo:UO_0000192, obo:NCIT_C181341;
     rdfs:label "Unit: Normalized Molecule Count"^^xsd:string.
 
-:integer_ a sio:SIO_000074, obo:UO_0000192;
+:raw_unit_ a sio:SIO_000074, obo:UO_0000192;
     rdfs:label "Unit: Molecule Count"^^xsd:string.
     
 :expression_ a sio:SIO_010450, sio:SIO_010450;
